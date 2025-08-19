@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import Features from "./components/Features.tsx";
 import Calendar from "./components/Calendar.tsx";
 import LoginForm from "./components/LoginForm.tsx";
+import ConventionAdminPanel from "./components/adminComponents/StaffManagement.tsx";
+import ConventionIDCard from "./components/UserBadge.tsx";
 
 
 createRoot(document.getElementById('root')!).render(
@@ -16,6 +18,9 @@ createRoot(document.getElementById('root')!).render(
               <Route path="/features" element={<Features />} />
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/login" element={<LoginForm />} />
+              <Route path="admin" element={<ConventionAdminPanel />} />
+              <Route path="badge" element={<ConventionIDCard />} />
+
           </Routes>
       </BrowserRouter>
   </StrictMode>,
